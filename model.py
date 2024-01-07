@@ -63,5 +63,5 @@ schedule.every().day.at("12:45").do(sc.mail.mailing)
 
 
 while True:
-    schedule.cancel_job(sc.mail.mailing)
+    schedule.run_pending()
     time.sleep(1)

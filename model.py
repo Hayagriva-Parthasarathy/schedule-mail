@@ -59,9 +59,9 @@ class Scheduling:
     
 
 sc= Scheduling()
-schedule.every().day.at("12:45").do(sc.mail.mailing)
+schedule.every().day.at("12:41").do(sc.mail.mailing)
 
 
 while True:
-    schedule.cancel_job(sc.mail.mailing)
-    time.sleep(1)
+    schedule.run_pending()
+    time.sleep(60)
